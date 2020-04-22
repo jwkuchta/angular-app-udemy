@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+
   selector: 'app-servers',
-  // templateUrl: './servers.component.html',
   // here is an alternative to importing an external html template
   // template: `
   // <app-server></app-server>
   // <app-server></app-server>
-  // <app-server></app-server>
   // `,
+
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
+
 export class ServersComponent implements OnInit {
 
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  serverName = 'potato';
 
   constructor() {
     setTimeout(() => {
@@ -24,5 +27,16 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onCreateServer() {
+    this.serverCreationStatus = `Server ${this.serverName} was created`
+  }
+
+  // with two-way binding we no longer need the following method!
+
+  // onUpdateServerName(event: any) {
+  //   console.log(event.target.value)
+  //   this.serverName = event.target.value
+  // }
 
 }

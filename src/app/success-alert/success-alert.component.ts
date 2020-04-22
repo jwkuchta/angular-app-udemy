@@ -5,9 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './success-alert.component.html',
   // styleUrls: ['./success-alert.component.css']
   styles: [`
-    p {
-      background-color: green;
-    }
+  p {
+    background-color: lightGreen;
+    padding: 20px;
+    border: 2px solid;
+    color: green;
+  }
   `]
 })
 export class SuccessAlertComponent implements OnInit {

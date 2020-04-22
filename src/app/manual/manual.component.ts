@@ -12,5 +12,18 @@ import { Component } from '@angular/core'
 })
 
 export class ManualComponent {
+    
+    username = ''
+    emptyString = true
 
+    onInput(e) {
+        if(e.target.value !== '') {
+            this.emptyString = false
+        }
+    }
+
+    onUserReset() {
+        this.username = ''
+        this.emptyString = true
+    }
 }

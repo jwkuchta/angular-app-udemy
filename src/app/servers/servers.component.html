@@ -1,8 +1,27 @@
 <!-- square brackets indicate to angular that we are using property binding that we want to change 
 dynamically, as opposed to it being hardcoded in this case our 'disabled' property-->
 <!--  now it will only be disabled for 2 seconds. This is PROPERTY BINDING-->
-<button class='btn btn-primary' [disabled]='!allowNewServer'>
-    Add Server
-</button>
+<label>Server Name</label>
+<!-- <input
+type='text'
+class='form-control'
+(input)='onUpdateServerName($event)'
+> -->
+
+<input
+type='text'
+class='form-control'
+[(ngModel)]='serverName'
+>
+
+<button 
+class='btn btn-primary' 
+[disabled]='!allowNewServer'
+(click)='onCreateServer()'
+>Add Server</button>
+
+<p>{{serverCreationStatus}}</p>
+<p>{{serverName}}</p>
+
 <app-server></app-server>
 <app-server></app-server>

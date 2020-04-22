@@ -1,1 +1,24 @@
-<h1>This is just another component. This one I made manually, weee!</h1>
+<h1>This section is for the data binding assignment</h1>
+
+<!-- And an Input field which updates a property 'username' via two-way binding 
+Output the username property via string interpolation in a p tag below
+Add a button which can only be clicked if the username is NOT an empty string
+Upon clicking the button the username should be reset to an empty string -->
+
+<label>Username</label>
+
+<input
+type='text'
+class='form-control'
+[(ngModel)]='username'
+(input)='onInput($event)'
+>
+
+<button
+class='btn btn-primary' 
+[disabled]='emptyString'
+(click)='onUserReset()'
+>Reset Username</button>
+
+<p>{{username}}</p>
+<p>{{username === '' ? 'empty string' : 'something is there'}}</p>
