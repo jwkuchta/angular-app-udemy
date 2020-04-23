@@ -16,8 +16,9 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   allowNewServer = false;
-  serverCreationStatus = 'No server was created!';
-  serverName = 'potato';
+  // serverCreationStatus = 'No server was created!';
+  serverName = '';
+  serverCreated = false
 
   constructor() {
     setTimeout(() => {
@@ -29,7 +30,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = `Server ${this.serverName} was created`
+    this.serverCreated = true
+    // this.serverCreationStatus = `Server ${this.serverName} was created`
   }
 
   // with two-way binding we no longer need the following method!

@@ -5,7 +5,7 @@ import { Component } from '@angular/core'
     styles: [`
         h1 {
             font-size: 20px;
-            color: teal:
+            color: navy;
         }
     `],
     templateUrl: './manual.component.html'
