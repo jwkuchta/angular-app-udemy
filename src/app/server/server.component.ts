@@ -9,7 +9,12 @@ import { Component } from '@angular/core';
 // we pass it an object that lets Angular what to do with this class
 @Component({
     selector: 'app-server',
-    templateUrl: './server.component.html'
+    templateUrl: './server.component.html',
+    styles: [`
+        .online {
+            color: white;
+        }
+    `]
 })
 
 export class ServerComponent { 
