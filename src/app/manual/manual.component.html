@@ -23,3 +23,17 @@ class='btn btn-primary'
 <div>
     <h1>{{username}}</h1>
 </div>
+
+<button
+(click)='onClick()'>
+    Display Details
+</button>
+
+<p *ngIf='showDetails else noClicks'>My favorite fruit is avocado.</p>
+<p #noClicks>You have not clicked yet</p>
+<h1 
+*ngFor='let click of clicks'
+[ngClass]="{styled: click >= 5}"
+>
+    You clicked {{click}} times!
+</h1>
